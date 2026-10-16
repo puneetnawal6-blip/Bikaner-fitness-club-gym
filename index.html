@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101114">
+<meta name="description" content="Bikaner Fitness Club & Gym — modern equipment, professional K11-certified trainer, cardio and strength training in JNV, Bikaner.">
+<title>Bikaner Fitness Club & Gym | JNV, Bikaner</title>
+<style>
+:root {
+  --bg:#090a0c; --panel:#111317; --panel2:#17191e; --text:#f6f7f9;
+  --muted:#b9bdc7; --accent:#f4c400; --accent2:#ffdf4d; --line:#292c33;
+  --max:1180px; --radius:22px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),92%);margin:auto}
+.nav{position:sticky;top:0;z-index:20;background:rgba(9,10,12,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:900;letter-spacing:.5px;font-size:18px}
+.brand span{color:var(--accent)}
+.navlinks{display:flex;gap:22px;font-weight:700;font-size:14px;color:#e7e8eb}
+.navlinks a:hover{color:var(--accent)}
+.menu{display:none;background:none;border:1px solid var(--line);color:white;padding:8px 10px;border-radius:10px}
+.hero{min-height:86vh;display:grid;align-items:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,10,12,.94) 0%,rgba(9,10,12,.76) 48%,rgba(9,10,12,.25) 100%),url('images/gym-01.jpg') center/cover}
+.hero-content{position:relative;padding:90px 0;max-width:720px}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 13px;border:1px solid rgba(244,196,0,.35);background:rgba(244,196,0,.08);border-radius:999px;color:var(--accent2);font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+h1{font-size:clamp(44px,7vw,82px);line-height:.98;margin:22px 0 18px;letter-spacing:-3px}
+h1 span{color:var(--accent)}
+.hero p{font-size:19px;color:#e2e4e8;max-width:640px}
+.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:13px;font-weight:900;border:1px solid var(--line);transition:.2s}
+.btn-primary{background:var(--accent);color:#111}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px)}
+.btn-dark{background:rgba(17,19,23,.8)}
+.btn-dark:hover{border-color:#555}
+section{padding:88px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}
+.kicker{color:var(--accent);font-weight:900;text-transform:uppercase;letter-spacing:1.5px;font-size:12px}
+h2{font-size:clamp(30px,4vw,48px);line-height:1.05;margin:8px 0 0;letter-spacing:-1.5px}
+.lead{color:var(--muted);max-width:650px}
+.grid{display:grid;gap:18px}
+.features{grid-template-columns:repeat(4,1fr)}
+.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.icon{font-size:28px;margin-bottom:14px}
+.card h3{margin:0 0 7px;font-size:20px}
+.card p{margin:0;color:var(--muted);font-size:14px}
+.about{grid-template-columns:1.05fr .95fr;align-items:stretch}
+.about-img{min-height:470px;border-radius:var(--radius);background:url('images/gym-03.jpg') center/cover;border:1px solid var(--line)}
+.about-copy{padding:12px 0 12px 20px}
+.checks{display:grid;gap:12px;margin-top:22px}
+.check{display:flex;gap:10px;align-items:flex-start;color:#e7e8eb}
+.check b{color:var(--accent)}
+.gallery{grid-template-columns:repeat(3,1fr)}
+.gallery-item{padding:0;border:0;background:none;cursor:pointer;border-radius:18px;overflow:hidden;aspect-ratio:4/3}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:.35s}
+.gallery-item:hover img{transform:scale(1.04)}
+.cta{background:linear-gradient(135deg,#17191e,#0c0d10);border:1px solid var(--line);border-radius:28px;padding:40px;display:flex;justify-content:space-between;gap:25px;align-items:center}
+.cta h2{max-width:700px}
+.contact{grid-template-columns:1fr 1fr}
+.contact-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.contact-row{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.contact-row:last-child{border-bottom:0}
+.contact-row strong{display:block}
+.contact-row span{color:var(--muted);font-size:14px}
+.map{width:100%;height:100%;min-height:360px;border:0;border-radius:var(--radius);background:#17191e}
+.footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:13px}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:24px;z-index:50}
+.lightbox.show{display:flex}
+.lightbox img{max-width:95vw;max-height:90vh;border-radius:15px}
+.close{position:absolute;top:20px;right:24px;font-size:36px;color:white;background:none;border:0;cursor:pointer}
+@media(max-width:900px){.features{grid-template-columns:repeat(2,1fr)}.about,.contact{grid-template-columns:1fr}.about-copy{padding:0}}
+@media(max-width:700px){
+  .navlinks{display:none;position:absolute;left:4%;right:4%;top:66px;background:#111317;border:1px solid var(--line);padding:16px;border-radius:16px;flex-direction:column}
+  .navlinks.open{display:flex} .menu{display:block}
+  h1{letter-spacing:-2px} .hero{min-height:78vh} section{padding:64px 0}
+  .features,.gallery{grid-template-columns:1fr 1fr} .gallery-item{aspect-ratio:1/1}
+  .cta{padding:28px;flex-direction:column;align-items:flex-start}
+}
+@media(max-width:460px){.features,.gallery{grid-template-columns:1fr}.buttons .btn{width:100%}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#home">BIKANER <span>FITNESS</span></a>
+    <div class="navlinks" id="navlinks">
+      <a href="#about">About</a><a href="#facilities">Facilities</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+    </div>
+    <button class="menu" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Open menu">☰</button>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="container hero-content">
+    <div class="eyebrow">5+ Years • JNV, Bikaner</div>
+    <h1>Train Strong.<br><span>Feel at Home.</span></h1>
+    <p>Modern equipment, dedicated cardio & strength zones, and a professional K11-certified trainer — all with the comfortable, ghar-jaisa environment our members value.</p>
+    <div class="buttons">
+      <a class="btn btn-primary" href="tel:+919119254517">Call 9119254517</a>
+      <a class="btn btn-dark" href="https://wa.me/919119254517?text=Hi%20Bikaner%20Fitness%20Club%20%26%20Gym%2C%20I%20want%20to%20know%20about%20membership." target="_blank" rel="noopener">WhatsApp Us</a>
+      <a class="btn btn-dark" href="https://maps.app.goo.gl/BmrbD1juP98xcmW5A" target="_blank" rel="noopener">Get Directions</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="kicker">Why Bikaner Fitness</div><h2>A premium training space in JNV.</h2></div>
+      <p class="lead">Built for people who want serious training without losing the friendly, welcoming atmosphere of a neighbourhood gym.</p>
+    </div>
+    <div class="grid about">
+      <div class="about-img" aria-label="Bikaner Fitness Club & Gym interior"></div>
+      <div class="about-copy">
+        <p class="lead">Bikaner Fitness Club & Gym has been serving the local fitness community for 5+ years. The gym combines modern strength equipment, cardio options and hands-on professional guidance in a clean, spacious setting.</p>
+        <div class="checks">
+          <div class="check"><b>✓</b><span><strong>Modern equipment</strong><br>Strength and functional training equipment for varied workouts.</span></div>
+          <div class="check"><b>✓</b><span><strong>K11-certified professional trainer</strong><br>Guidance from owner & trainer Puneet Nawal.</span></div>
+          <div class="check"><b>✓</b><span><strong>Ghar-jaisa environment</strong><br>Friendly, comfortable and motivating atmosphere.</span></div>
+          <div class="check"><b>✓</b><span><strong>JNV location</strong><br>Near Doctor Academy, JNV Khaturiya Colony Main Road, Bikaner.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="facilities">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="kicker">Facilities</div><h2>Everything you need to train.</h2></div>
+    </div>
+    <div class="grid features">
+      <div class="card"><div class="icon">🏋️</div><h3>Strength Training</h3><p>Modern machines, benches and free-weight training options for full-body workouts.</p></div>
+      <div class="card"><div class="icon">🏃</div><h3>Cardio Zone</h3><p>Dedicated cardio equipment for conditioning and endurance sessions.</p></div>
+      <div class="card"><div class="icon">🎯</div><h3>Professional Guidance</h3><p>K11-certified trainer support to help members train with better technique and consistency.</p></div>
+      <div class="card"><div class="icon">🏠</div><h3>Comfortable Atmosphere</h3><p>A spacious, welcoming environment designed to feel comfortable from your first session.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="kicker">Real Gym Photos</div><h2>See the space.</h2></div>
+      <p class="lead">Explore the training floor, machines, cardio area and overall gym environment.</p>
+    </div>
+    <div class="grid gallery"><button class="gallery-item" onclick="openLightbox('gym-01.jpg')" aria-label="Open gym photo 1">
+        <img src="images/gym-01.jpg" alt="Bikaner Fitness Club & Gym photo 1" loading="lazy">
+    </button>
+<button class="gallery-item" onclick="openLightbox('gym-02.jpg')" aria-label="Open gym photo 2">
+        <img src="images/gym-02.jpg" alt="Bikaner Fitness Club & Gym photo 2" loading="lazy">
+    </button>
+<button class="gallery-item" onclick="openLightbox('gym-03.jpg')" aria-label="Open gym photo 3">
+        <img src="images/gym-03.jpg" alt="Bikaner Fitness Club & Gym photo 3" loading="lazy">
+    </button>
+<button class="gallery-item" onclick="openLightbox('gym-04.jpg')" aria-label="Open gym photo 4">
+        <img src="images/gym-04.jpg" alt="Bikaner Fitness Club & Gym photo 4" loading="lazy">
+    </button>
+<button class="gallery-item" onclick="openLightbox('gym-05.jpg')" aria-label="Open gym photo 5">
+        <img src="images/gym-05.jpg" alt="Bikaner Fitness Club & Gym photo 5" loading="lazy">
+    </button>
+<button class="gallery-item" onclick="openLightbox('gym-06.jpg')" aria-label="Open gym photo 6">
+        <img src="images/gym-06.jpg" alt="Bikaner Fitness Club & Gym photo 6" loading="lazy">
+    </button>
+<button class="gallery-item" onclick="openLightbox('gym-07.jpg')" aria-label="Open gym photo 7">
+        <img src="images/gym-07.jpg" alt="Bikaner Fitness Club & Gym photo 7" loading="lazy">
+    </button>
+<button class="gallery-item" onclick="openLightbox('gym-08.jpg')" aria-label="Open gym photo 8">
+        <img src="images/gym-08.jpg" alt="Bikaner Fitness Club & Gym photo 8" loading="lazy">
+    </button>
+<button class="gallery-item" onclick="openLightbox('gym-09.jpg')" aria-label="Open gym photo 9">
+        <img src="images/gym-09.jpg" alt="Bikaner Fitness Club & Gym photo 9" loading="lazy">
+    </button>
+<button class="gallery-item" onclick="openLightbox('gym-10.png')" aria-label="Open gym photo 10">
+        <img src="images/gym-10.png" alt="Bikaner Fitness Club & Gym photo 10" loading="lazy">
+    </button></div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta">
+      <div>
+        <div class="kicker">Ready to start?</div>
+        <h2>Come train with us in JNV, Bikaner.</h2>
+        <p class="lead">Call or WhatsApp for membership details, timings and a visit.</p>
+      </div>
+      <div class="buttons">
+        <a class="btn btn-primary" href="https://wa.me/919119254517?text=Hi%20Bikaner%20Fitness%20Club%20%26%20Gym%2C%20please%20share%20membership%20details." target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-dark" href="tel:+919119254517">Call Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="kicker">Contact</div><h2>Visit Bikaner Fitness Club & Gym.</h2></div>
+    </div>
+    <div class="grid contact">
+      <div class="contact-card">
+        <div class="contact-row"><div>📍</div><div><strong>Address</strong><span>Near Doctor Academy, JNV Khaturiya Colony Main Road, JNV, Bikaner</span></div></div>
+        <div class="contact-row"><div>🕒</div><div><strong>Hours</strong><span>5:30 AM – 10:00 PM</span></div></div>
+        <div class="contact-row"><div>📞</div><div><strong>Phone / WhatsApp</strong><span><a href="tel:+919119254517">9119254517</a></span></div></div>
+        <div class="contact-row"><div>✉️</div><div><strong>Email</strong><span><a href="mailto:puneetnawal6@gmail.com">puneetnawal6@gmail.com</a></span></div></div>
+        <div class="contact-row"><div>📸</div><div><strong>Instagram</strong><span><a href="https://instagram.com/bikaner_fitness_club_gym" target="_blank" rel="noopener">@bikaner_fitness_club_gym</a></span></div></div>
+        <div class="buttons">
+          <a class="btn btn-primary" href="https://maps.app.goo.gl/BmrbD1juP98xcmW5A" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+      <iframe class="map" src="https://www.google.com/maps?q=Bikaner%20Fitness%20Club%20%26%20Gym%2C%20Bikaner%2C%20Rajasthan&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bikaner Fitness Club & Gym map"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>© 2026 Bikaner Fitness Club & Gym. All rights reserved.</div>
+    <div>Owner & Trainer: Puneet Nawal • K11 Certified</div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="close" onclick="closeLightbox(event)" aria-label="Close">×</button>
+  <img id="lightboxImg" src="" alt="Gym photo enlarged">
+</div>
+
+<script>
+function openLightbox(src){
+  const box=document.getElementById('lightbox');
+  document.getElementById('lightboxImg').src='images/'+src;
+  box.classList.add('show');
+}
+function closeLightbox(e){
+  if(e.target.id==='lightbox' || e.target.classList.contains('close')) document.getElementById('lightbox').classList.remove('show');
+}
+</script>
+</body>
+</html>
